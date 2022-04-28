@@ -1,0 +1,62 @@
+*{
+    padding: 0;
+    border: 0;
+    border-radius: 10px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, red, black) no-repeat;
+    transform-style: preserve-3d;
+}
+
+.menu{
+    background: black;
+    transform-style: preserve-3d;
+    transform: rotateX(45deg) skewX(30deg) rotateY(-5deg);
+}
+
+.menu div{
+    transform-style: preserve-3d;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 1px solid white;
+    
+}
+
+.main{
+    color: rgb(255, 255, 255);
+    background: radial-gradient(black, red);
+    transform-style: preserve-3d;
+    font-size: 20px;
+    transition: all 0.5s ease-in-out;
+    border: black solid;
+}
+
+.menu div:hover .main {
+    transform: translateZ(40px);
+}
+
+.box{
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    background: black;
+    transform-style: preserve-3d;
+    transform: rotateX(-90deg) rotateY(calc(-90deg * var(--i))) translateZ(40px) translateY(20px);
+    transition: all 0.5s ease-in-out;
+    border-radius: 0;
+}
+
+.menu div:hover .box{
+    height: 100%;
+    transform: rotateX(-90deg) rotateY(calc(-90deg * var(--i))) translateZ(40px) translateY(0px);
+}
+
+
